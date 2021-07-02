@@ -162,6 +162,7 @@ export function TaskListProvider({ children }) {
       loadTasks();
       getTodaysTasks();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentUser]);
 
   const value = {

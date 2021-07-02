@@ -25,6 +25,7 @@ export default function CropInfo({ match }) {
 
   return (
     <div className="container">
+      {error && <p>{error}</p>}
       {!specificCropData && <p>Loading crop information...</p>}
       {specificCropData && (
         <div className="crop-info">
@@ -32,7 +33,7 @@ export default function CropInfo({ match }) {
             <div className="img-container">
               <img
                 src={getFullImageURL(specificCropData.image_url)}
-                alt={`${specificCropData.name} image`}
+                alt={`${specificCropData.name}`}
               />
             </div>
             <h1>{specificCropData.name}</h1>

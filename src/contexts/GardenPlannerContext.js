@@ -58,6 +58,7 @@ export function GardenPlannerProvider({ children }) {
 
   useEffect(() => {
     retrieveAllCropData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allCropData]);
 
   const value = {
