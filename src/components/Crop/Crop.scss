@@ -1,0 +1,72 @@
+@import "../../theme";
+
+.crop {
+  align-items: center;
+  border-bottom: 1px solid $lightgrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 800px;
+  padding: 10px 0;
+  width: 94vw;
+
+  .crop-title {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    width: 60%;
+  }
+
+  .img-container {
+    height: 3rem;
+    margin-right: 20px;
+    width: 3rem;
+  }
+
+  img {
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .crop-btns {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+
+    button {
+      background-color: $lightgreen;
+      height: 50px;
+      margin: 0 10px;
+      text-transform: none;
+      width: 150px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .crop {
+    max-width: 600px;
+
+    .crop-title {
+      width: 40%;
+    }
+
+    .crop-btns {
+      width: 60%;
+
+      button {
+        font-size: 0.8rem;
+        width: 120px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .crop {
+    max-width: 480px;
+  }
+}

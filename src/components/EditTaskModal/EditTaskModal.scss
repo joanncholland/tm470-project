@@ -1,0 +1,29 @@
+@import "../../theme";
+
+.modal {
+  width: 100%;
+
+  form {
+    display: flex;
+
+    button {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: 931px) {
+  .modal {
+    form {
+      flex-direction: column !important;
+
+      .input-field {
+        padding: 0 !important;
+      }
+
+      button {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

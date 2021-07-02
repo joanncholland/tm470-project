@@ -1,0 +1,61 @@
+@import "../../theme";
+@import "../../main.scss";
+
+.crop-index {
+  max-width: 800px;
+  width: 80vw;
+
+  .crop-search-add {
+    align-items: center;
+    border-radius: 8px;
+    @include box-shadow;
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+
+    form {
+      align-items: flex-end;
+      background-color: $lightgrey;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 30px 40px;
+      width: 100%;
+    }
+
+    .search-input {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 20px;
+    }
+
+    .add-crop {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 40%;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .crop-search-add {
+    max-width: 95vw;
+
+    h1 {
+      text-align: center;
+    }
+
+    .crop-search {
+      max-width: 95vw;
+    }
+  }
+}

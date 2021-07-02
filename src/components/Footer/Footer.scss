@@ -1,0 +1,31 @@
+@import "../../theme";
+
+footer {
+  background-color: $lightgrey;
+  padding: 30px;
+
+  ul {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  small {
+    color: $mediumgrey;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    ul {
+      flex-direction: column;
+    }
+  }
+}

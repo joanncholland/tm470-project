@@ -1,0 +1,25 @@
+@import "../../theme";
+@import "../../main.scss";
+
+.weather {
+  background-color: $lightgrey;
+  border-radius: 8px;
+  @include box-shadow;
+  display: flex;
+  padding: 20px;
+  width: 400px;
+
+  h3 {
+    margin: 0;
+  }
+
+  .weather-description {
+    width: 70%;
+  }
+
+  img {
+    object-fit: cover;
+    transform: scale(0.7);
+    width: 30%;
+  }
+}

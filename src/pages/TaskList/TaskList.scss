@@ -1,0 +1,32 @@
+@import "../../theme";
+@import "../../main";
+
+.task-list {
+  max-width: 1000px;
+  width: 100%;
+
+  .add-task {
+    background-color: $lightgrey;
+    border-radius: 8px;
+    @include box-shadow;
+    padding: 20px 50px;
+  }
+
+  form {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+
+    .input-field,
+    button {
+      @include box-shadow;
+      padding: 10px;
+    }
+
+    button {
+      background-color: #fff;
+    }
+  }
+}

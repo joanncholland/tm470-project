@@ -1,0 +1,30 @@
+@import "../../theme";
+
+.crop-info {
+  max-width: 800px;
+  width: 100%;
+
+  .crop-info-title {
+    align-items: center;
+    display: flex;
+
+    .img-container {
+      height: 10rem;
+      margin-right: 20px;
+      width: 10rem;
+    }
+
+    img {
+      border-radius: 50%;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .crop-info {
+    max-width: 500px;
+  }
+}

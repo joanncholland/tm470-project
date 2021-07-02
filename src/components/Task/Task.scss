@@ -1,0 +1,52 @@
+@import "../../theme";
+
+.task {
+  align-items: center;
+  background-color: $lightgreen;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 20px;
+  width: 100%;
+
+  .task-info {
+    align-items: center;
+    display: flex;
+
+    input {
+      border-radius: 8px;
+      -webkit-box-shadow: 0px 0px 2px 2px $lightgreen;
+      box-shadow: 0px 0px 2px 2px $lightgreen;
+      height: 20px;
+      margin-right: 20px;
+      margin-top: 5px;
+      width: 20px;
+    }
+
+    p {
+      padding-right: 10px;
+    }
+    small {
+      margin-top: 0;
+    }
+  }
+
+  .task-controls {
+    align-items: center;
+    display: flex;
+
+    p {
+      cursor: pointer;
+      margin-right: 20px;
+    }
+
+    .edit-task {
+      color: $darkbrown;
+    }
+
+    .delete-task {
+      color: $mutedred;
+    }
+  }
+}
