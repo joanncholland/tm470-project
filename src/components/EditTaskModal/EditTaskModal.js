@@ -17,7 +17,8 @@ export default function EditTaskModal({ id, title, date, setIsEditing }) {
   }
 
   return (
-    <div className="modal">
+    <div className="edit-task-modal">
+      <h2>Edit Task</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-field">
           <label htmlFor="title">Title</label>
@@ -27,7 +28,6 @@ export default function EditTaskModal({ id, title, date, setIsEditing }) {
             id="title"
             value={editingTitle}
             onChange={(e) => {
-              console.log(e.target.value);
               setEditingTitle(e.target.value);
             }}
           />
@@ -40,7 +40,6 @@ export default function EditTaskModal({ id, title, date, setIsEditing }) {
             id="date"
             value={editingDate}
             onChange={(e) => {
-              console.log(e.target.value);
               setEditingDate(e.target.value);
             }}
           />

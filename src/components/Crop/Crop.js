@@ -5,7 +5,12 @@ import { useGardenPlanner } from "../../contexts/GardenPlannerContext";
 import "./Crop.scss";
 
 export default function Crop({ cropInfo }) {
-  const { getFullImageURL, addPlantToPlanner } = useGardenPlanner();
+  const {
+    getFullImageURL,
+    setChoosingLocation,
+    choosingLocation,
+    setSelectedCrop,
+  } = useGardenPlanner();
   const { name, image_url, id } = cropInfo;
 
   return (
@@ -17,10 +22,17 @@ export default function Crop({ cropInfo }) {
         {name}
       </div>
       <div className="crop-btns">
-        <button>
+        <button className="grey-btn">
           <Link to={`/crop-index/${id}`}>View Info</Link>
         </button>
-        <button onClick={() => addPlantToPlanner(id)}>Add to Planner</button>
+        <button
+          onClick={() => {
+            setChoosingLocation(!choosingLocation);
+            setSelectedCrop({ id, name, imageURL: getFullImageURL(image_url) });
+          }}
+        >
+          Add to Planner
+        </button>
       </div>
     </div>
   );

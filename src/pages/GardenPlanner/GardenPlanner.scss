@@ -1,5 +1,25 @@
 @import "../../theme";
+@import "../../main.scss";
 
 .garden-planner {
   max-width: 800px;
+
+  form {
+    align-items: center;
+    background-color: $lightlightgrey;
+    border-radius: 8px;
+    @include box-shadow;
+    display: flex;
+    justify-content: center;
+    padding: 20px 60px 50px 30px;
+
+    .input-field {
+      margin: 0 30px;
+    }
+
+    button {
+      background-color: #fff;
+      margin-top: 23px;
+    }
+  }
 }

@@ -58,13 +58,12 @@ export function TaskListProvider({ children }) {
   async function getTodaysTasks() {
     await database
       .ref(`users/${currentUser.uid}/tasks`)
-      .startAt(`${getTodaysDateTimestamp()}`)
-      .endAt(`${getTodaysDateTimestamp()}`)
+      .orderByChild("date")
+      .equalTo(getTodaysDateTimestamp().toString())
       .on("value", (snapshot) => {
         if (snapshot) {
           let tasks = [];
           snapshot.forEach((child) => {
-            console.log(child);
             tasks.push({
               id: child.key,
               ...child.val(),
@@ -110,7 +109,6 @@ export function TaskListProvider({ children }) {
   }
 
   function editTask(taskID, title, date) {
-    console.log(date);
     database.ref(`users/${currentUser.uid}/tasks/${taskID}`).set({
       completed: false,
       title,
@@ -152,7 +150,6 @@ export function TaskListProvider({ children }) {
       arr[1] = "0" + arr[1];
     }
     let newDate = arr.reverse().join("-");
-    console.log(newDate);
     return newDate;
   }
 

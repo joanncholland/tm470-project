@@ -1,0 +1,72 @@
+@import "../../theme";
+
+.garden-location {
+  border: 1px solid $mediumgrey;
+  margin-bottom: 20px;
+
+  p {
+    cursor: pointer;
+  }
+
+  .garden-location-title {
+    align-items: center;
+    background-color: $lightgreen;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 10px;
+    width: 100%;
+
+    p {
+      color: $darkbrown;
+      padding: 0;
+    }
+  }
+  ul {
+    li {
+      align-items: center;
+      border-bottom: 1px solid $lightgrey;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      padding: 15px 20px;
+
+      .crop-info {
+        align-items: center;
+        display: flex;
+      }
+
+      .img-container {
+        height: 4rem;
+        margin-right: 20px;
+        width: 4rem;
+      }
+
+      img {
+        border-radius: 50%;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      button {
+        background-color: $lightgrey;
+      }
+
+      p {
+        width: 120px;
+      }
+
+      .delete-link {
+        color: $mutedred;
+      }
+    }
+  }
+
+  .btn-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+}

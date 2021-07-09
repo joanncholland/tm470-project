@@ -5,8 +5,14 @@ import "./CropInfo.scss";
 
 export default function CropInfo({ match }) {
   const currentPlantID = match.params.plantID;
-  const { retrieveSpecificCropData, specificCropData, getFullImageURL } =
-    useGardenPlanner();
+  const {
+    retrieveSpecificCropData,
+    setSpecificCropData,
+    specificCropData,
+    getFullImageURL,
+    getCropNotes,
+    cropNotes,
+  } = useGardenPlanner();
   const [error, setError] = useState("");
 
   async function getCropData() {
@@ -19,7 +25,9 @@ export default function CropInfo({ match }) {
   }
 
   useEffect(() => {
+    setSpecificCropData(null);
     getCropData();
+    getCropNotes(currentPlantID);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -38,7 +46,6 @@ export default function CropInfo({ match }) {
             </div>
             <h1>{specificCropData.name}</h1>
           </div>
-
           <h2>Description</h2>
           <p>{specificCropData.description}</p>
           <h2>Optimal Sun</h2>
@@ -69,6 +76,10 @@ export default function CropInfo({ match }) {
           <p>{specificCropData.harvesting}</p>
           <h2>Storage Use</h2>
           <p>{specificCropData.storage_use}</p>
+          <div>
+            <h2>Your Notes</h2>
+            {cropNotes && <p>{cropNotes}</p>}
+          </div>
         </div>
       )}
     </div>

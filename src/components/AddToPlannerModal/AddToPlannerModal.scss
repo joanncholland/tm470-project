@@ -1,0 +1,47 @@
+@import "../../theme";
+
+.modal {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  overflow: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 20;
+
+  .locations-list {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+
+    ul {
+      li {
+        align-items: center;
+        display: flex;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        list-style: none;
+        margin-bottom: 20px;
+        width: 300px;
+
+        h3 {
+          width: 50%;
+        }
+
+        button {
+          height: 50px !important;
+          width: 50%;
+        }
+      }
+    }
+
+    p {
+      color: $darkgreen;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}

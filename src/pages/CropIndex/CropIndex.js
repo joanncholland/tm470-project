@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import { useGardenPlanner } from "../../contexts/GardenPlannerContext";
 import Crop from "../../components/Crop/Crop";
+import AddToPlannerModal from "../../components/AddToPlannerModal/AddToPlannerModal";
 
 // STYLES
 import "./CropIndex.scss";
 
 export default function CropIndex() {
   const [searchInput, setSearchInput] = useState("");
-  const { allCropData } = useGardenPlanner();
+  const { allCropData, choosingLocation } = useGardenPlanner();
 
   return (
     <div className="container">
+      {choosingLocation && <AddToPlannerModal />}
       <div className="crop-index">
         <h1>Crop Index</h1>
 

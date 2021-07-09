@@ -1,0 +1,98 @@
+Date : 2021-07-09 18:40:34
+Directory : /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code
+Total : 50 files,  2397 codes, 55 comments, 386 blanks, all 2838 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |         29 |      1,587 |         30 |        212 |      1,829 |
+| SCSS       |         17 |        688 |          2 |        138 |        828 |
+| JSON       |          2 |         67 |          0 |          2 |         69 |
+| Markdown   |          1 |         38 |          0 |         33 |         71 |
+| HTML       |          1 |         17 |         23 |          1 |         41 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                                         | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                                            |         50 |      2,397 |         55 |        386 |      2,838 |
+| public                                                                                                                                                       |          2 |         42 |         23 |          2 |         67 |
+| src                                                                                                                                                          |         46 |      2,275 |         32 |        350 |      2,657 |
+| src/components                                                                                                                                               |         18 |        764 |          1 |        118 |        883 |
+| src/components/AddToPlannerModal                                                                                                                             |          2 |         83 |          0 |         11 |         94 |
+| src/components/Crop                                                                                                                                          |          2 |        100 |          0 |         17 |        117 |
+| src/components/EditTaskModal                                                                                                                                 |          2 |         96 |          0 |         13 |        109 |
+| src/components/Footer                                                                                                                                        |          2 |         41 |          0 |          8 |         49 |
+| src/components/GardenLocation                                                                                                                                |          2 |        107 |          0 |         17 |        124 |
+| src/components/Navbar                                                                                                                                        |          2 |        133 |          0 |         17 |        150 |
+| src/components/Task                                                                                                                                          |          2 |        121 |          0 |         19 |        140 |
+| src/components/Weather                                                                                                                                       |          2 |         61 |          1 |         11 |         73 |
+| src/contexts                                                                                                                                                 |          3 |        402 |         21 |         60 |        483 |
+| src/pages                                                                                                                                                    |         20 |        894 |          5 |        135 |      1,034 |
+| src/pages/CropIndex                                                                                                                                          |          2 |        112 |          3 |         17 |        132 |
+| src/pages/CropInfo                                                                                                                                           |          2 |        106 |          1 |         12 |        119 |
+| src/pages/Dashboard                                                                                                                                          |          2 |         63 |          0 |         11 |         74 |
+| src/pages/GardenPlanner                                                                                                                                      |          2 |         66 |          1 |         10 |         77 |
+| src/pages/GardenPlannerCrop.js                                                                                                                               |          2 |          9 |          0 |          4 |         13 |
+| src/pages/Registration                                                                                                                                       |          4 |        284 |          0 |         40 |        324 |
+| src/pages/TaskList                                                                                                                                           |          2 |         95 |          0 |         14 |        109 |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                                                                     | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/README.md                                               | Markdown   |         38 |          0 |         33 |         71 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/package.json                                            | JSON       |         42 |          0 |          1 |         43 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/public/index.html                                       | HTML       |         17 |         23 |          1 |         41 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/public/manifest.json                                    | JSON       |         25 |          0 |          1 |         26 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/App.js                                              | JavaScript |         67 |          0 |          8 |         75 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/_theme.scss                                         | SCSS       |         12 |          0 |          1 |         13 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/AddToPlannerModal/AddToPlannerModal.js   | JavaScript |         42 |          0 |          4 |         46 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/AddToPlannerModal/AddToPlannerModal.scss | SCSS       |         41 |          0 |          7 |         48 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/Crop/Crop.js                             | JavaScript |         36 |          0 |          4 |         40 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/Crop/Crop.scss                           | SCSS       |         64 |          0 |         13 |         77 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/EditTaskModal/EditTaskModal.js           | JavaScript |         54 |          0 |          5 |         59 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/EditTaskModal/EditTaskModal.scss         | SCSS       |         42 |          0 |          8 |         50 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/Footer/Footer.js                         | JavaScript |         15 |          0 |          2 |         17 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/Footer/Footer.scss                       | SCSS       |         26 |          0 |          6 |         32 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/GardenLocation/GardenLocation.js         | JavaScript |         46 |          0 |          5 |         51 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/GardenLocation/GardenLocation.scss       | SCSS       |         61 |          0 |         12 |         73 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/Header.js                                | JavaScript |          4 |          0 |          2 |          6 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/Navbar/Navbar.js                         | JavaScript |         67 |          0 |          5 |         72 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/Navbar/Navbar.scss                       | SCSS       |         66 |          0 |         12 |         78 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/PrivateRoute.js                          | JavaScript |         18 |          0 |          3 |         21 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/Task/Task.js                             | JavaScript |         77 |          0 |         10 |         87 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/Task/Task.scss                           | SCSS       |         44 |          0 |          9 |         53 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/Weather/Weather.js                       | JavaScript |         40 |          1 |          6 |         47 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/components/Weather/Weather.scss                     | SCSS       |         21 |          0 |          5 |         26 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/contexts/GardenPlannerContext.js                    | JavaScript |        151 |         17 |         22 |        190 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/contexts/TaskListContext.js                         | JavaScript |        160 |          4 |         19 |        183 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/contexts/UserAuthContext.js                         | JavaScript |         91 |          0 |         19 |        110 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/firebase.js                                         | JavaScript |         19 |          3 |          4 |         26 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/index.js                                            | JavaScript |         10 |          0 |          3 |         13 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/main.scss                                           | SCSS       |        107 |          2 |         21 |        130 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/CropIndex/CropIndex.js                        | JavaScript |         60 |          3 |          7 |         70 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/CropIndex/CropIndex.scss                      | SCSS       |         52 |          0 |         10 |         62 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/CropInfo/CropInfo.js                          | JavaScript |         81 |          1 |          6 |         88 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/CropInfo/CropInfo.scss                        | SCSS       |         25 |          0 |          6 |         31 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/Dashboard/Dashboard.js                        | JavaScript |         35 |          0 |          5 |         40 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/Dashboard/Dashboard.scss                      | SCSS       |         28 |          0 |          6 |         34 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/ForgotPassword.js                             | JavaScript |         45 |          0 |          7 |         52 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/GardenPlanner/GardenPlanner.js                | JavaScript |         45 |          1 |          5 |         51 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/GardenPlanner/GardenPlanner.scss              | SCSS       |         21 |          0 |          5 |         26 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/GardenPlannerCrop.js/GardenPlanner.scss       | SCSS       |          0 |          0 |          1 |          1 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/GardenPlannerCrop.js/GardenPlannerCrop.js     | JavaScript |          9 |          0 |          3 |         12 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/Landing.js                                    | JavaScript |          8 |          0 |          2 |         10 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/Registration/Login.js                         | JavaScript |         74 |          0 |         11 |         85 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/Registration/NameLocation.js                  | JavaScript |         74 |          0 |          7 |         81 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/Registration/Registration.js                  | JavaScript |         85 |          0 |         12 |         97 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/Registration/Registration.scss                | SCSS       |         51 |          0 |         10 |         61 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/Support.js                                    | JavaScript |          9 |          0 |          2 |         11 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/TaskList/TaskList.js                          | JavaScript |         68 |          0 |          8 |         76 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/TaskList/TaskList.scss                        | SCSS       |         27 |          0 |          6 |         33 |
+| /Users/joannholland/Documents/Universities/Open University/TM470 Computing & IT Project/project-code/src/pages/UpdateProfile.js                              | JavaScript |         97 |          0 |         16 |        113 |
+| Total                                                                                                                                                        |            |      2,397 |         55 |        386 |      2,838 |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

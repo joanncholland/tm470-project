@@ -69,7 +69,6 @@ export default function Task({ task }) {
           <p
             className="edit-task"
             onClick={() => {
-              console.log(date);
               setIsEditing(!isEditing);
               setEditingTitle(title);
               setEditingDate(date);
