@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Weather from "../../components/Weather/Weather";
 import { useTaskList } from "../../contexts/TaskListContext";
@@ -9,7 +9,6 @@ import gardeningIllustration from "../../assets/images/gardeningIllustration.png
 
 export default function Dashboard() {
   const { todaysTasks } = useTaskList();
-  useEffect(() => {}, []);
 
   return (
     <div className="row">

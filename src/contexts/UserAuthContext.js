@@ -13,36 +13,51 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [weatherData, setWeatherData] = useState(null);
 
+  // register the user with their email address and password
   function register(email, password) {
     return auth.createUserWithEmailAndPassword(email, password);
   }
 
+  // log the user in with their email address and password credentials
   function login(email, password) {
     return auth.signInWithEmailAndPassword(email, password);
   }
 
+  // log the user out of their account
   function logout() {
     return auth.signOut();
   }
 
+  // send the user a password reset link to their registere email address
   function resetPassword(email) {
     return auth.sendPasswordResetEmail(email);
   }
 
+  // change the user's email to the new one they input
   function updateEmail(email) {
     return currentUser.updateEmail(email);
   }
 
+  // change the users password
   function updatePassword(password) {
     return currentUser.updatePassword(password);
   }
 
+  // set the user's current longitudinal and latitudinal location in this context's state
   function setLocation(lat, lon) {
     database
       .ref(`users/${currentUser.uid}/profile/location`)
       .set({ lat: `${lat}`, lon: `${lon}` });
   }
 
+  // set the user's first name in this context's state
+  function setFirstName(firstName) {
+    database
+      .ref(`users/${currentUser.uid}/profile`)
+      .set({ firstName: `${firstName}` });
+  }
+
+  // get the user's location from the database
   function getLocation() {
     database
       .ref(`users/${currentUser.uid}/profile/location`)
@@ -52,12 +67,7 @@ export function AuthProvider({ children }) {
       });
   }
 
-  function setFirstName(firstName) {
-    database
-      .ref(`users/${currentUser.uid}/profile`)
-      .set({ firstName: `${firstName}` });
-  }
-
+  // push the user's details in the database
   function setUserDetails(firstName, lat, lon) {
     database.ref(`users/${currentUser.uid}/profile`).set({
       firstName: `${firstName}`,
@@ -65,6 +75,7 @@ export function AuthProvider({ children }) {
     });
   }
 
+  // get the weather data from the WeatherAPI based on the user's location
   function getWeatherData(lat, lon) {
     axios
       .get(

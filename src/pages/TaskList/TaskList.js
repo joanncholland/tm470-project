@@ -14,6 +14,7 @@ export default function TaskList() {
     e.preventDefault();
 
     try {
+      // add task to the database
       await addTask(dateRef.current.value, titleRef.current.value);
     } catch (error) {
       setError(error);

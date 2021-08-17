@@ -3,7 +3,6 @@ import { useGardenPlanner } from "../../contexts/GardenPlannerContext";
 import Crop from "../../components/Crop/Crop";
 import AddToPlannerModal from "../../components/AddToPlannerModal/AddToPlannerModal";
 
-// STYLES
 import "./CropIndex.scss";
 
 export default function CropIndex() {
@@ -16,7 +15,6 @@ export default function CropIndex() {
       <div className="crop-index">
         <h1>Crop Index</h1>
 
-        {/** CROP SEARCH OR ADD */}
         <h2>Find or Add Crop</h2>
         <div className="crop-search-add">
           <form>
@@ -36,7 +34,6 @@ export default function CropIndex() {
           </form>
         </div>
 
-        {/**+ CROP LIST */}
         <h2>List of Crops</h2>
         {!allCropData && <p>Loading crop list...</p>}
         <ul>
@@ -49,7 +46,6 @@ export default function CropIndex() {
               .map((item, index) => {
                 return (
                   <li key={index}>
-                    {/** CROP COMPONENT */}
                     <Crop cropInfo={item} />
                   </li>
                 );
@@ -65,5 +61,5 @@ export default function CropIndex() {
 function toTitleCase(str) {
   return str.replace(/\w\S*/g, function (txt) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-  });
+  }); // (Dean, G., 2008)
 }

@@ -3,7 +3,7 @@ import { GardenPlannerProvider } from "./contexts/GardenPlannerContext";
 import { TaskListProvider } from "./contexts/TaskListContext";
 import Registration from "./pages/Registration/Registration";
 import Login from "./pages/Registration/Login";
-import Landing from "./pages/Landing";
+import Landing from "./pages/Landing/Landing";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
@@ -17,7 +17,6 @@ import Support from "./pages/Support";
 import Footer from "./components/Footer/Footer";
 import NameLocation from "./pages/Registration/NameLocation";
 import CropInfo from "./pages/CropInfo/CropInfo";
-import NewCrop from "./pages/NewCrop/NewCrop";
 
 function App() {
   return (
@@ -58,7 +57,6 @@ function App() {
                     path="/crop-index"
                     component={CropIndex}
                   />
-                  <PrivateRoute path="/add-new-crop" component={NewCrop} />
                 </GardenPlannerProvider>
               </Switch>
             </div>

@@ -55,6 +55,7 @@ export function TaskListProvider({ children }) {
       });
   }
 
+  // get the current day's tasks
   async function getTodaysTasks() {
     await database
       .ref(`users/${currentUser.uid}/tasks`)
@@ -74,6 +75,7 @@ export function TaskListProvider({ children }) {
       });
   }
 
+  // get the current day's unix timestamp
   function getTodaysDateTimestamp() {
     let today = new Date();
     let fullDate = new Date(
@@ -88,6 +90,7 @@ export function TaskListProvider({ children }) {
     return fullDate.getTime();
   }
 
+  // add task to the database
   function addTask(date, title) {
     database.ref(`users/${currentUser.uid}/tasks`).push({
       date: `${convertDateToUNIX(date)}`,
@@ -96,6 +99,7 @@ export function TaskListProvider({ children }) {
     });
   }
 
+  // delete task from the database
   function deleteTask(taskID) {
     database
       .ref(`users/${currentUser.uid}/tasks/${taskID}`)
@@ -108,6 +112,7 @@ export function TaskListProvider({ children }) {
       });
   }
 
+  // edit task in the database
   function editTask(taskID, title, date) {
     database.ref(`users/${currentUser.uid}/tasks/${taskID}`).set({
       completed: false,
@@ -116,6 +121,7 @@ export function TaskListProvider({ children }) {
     });
   }
 
+  // set tasks completion status in the database
   function setCompleted(taskID) {
     database
       .ref(`users/${currentUser.uid}/tasks/${taskID}`)
@@ -131,10 +137,12 @@ export function TaskListProvider({ children }) {
       });
   }
 
+  // convert JS date to unix timestamp
   function convertDateToUNIX(date) {
     return new Date(date).getTime();
   }
 
+  // convert unix timestamp to date string
   function convertUNIXToDate(unix) {
     let date = new Date(parseInt(unix));
     let day = date.getDate();
@@ -143,6 +151,7 @@ export function TaskListProvider({ children }) {
     return `${day}/${month}/${year}`;
   }
 
+  // reformate the date to use within the form input field
   function reformatDate(date) {
     // dd/mm/yyyy -> yyyy-mm-dd
     let arr = convertUNIXToDate(date).split("/");

@@ -72,15 +72,12 @@ export function GardenPlannerProvider({ children }) {
       });
   }
 
-  // add new note for crop
-  async function addCropNote(cropID, note) {
+  // edit notes for crop
+  async function editCropNote(cropID, note) {
     await database
       .ref(`users/${currentUser.uid}/cropNotes/${cropID}`)
       .set({ notes: `${note}` });
   }
-
-  // edit crop for specific crop
-  async function editCropNote(cropID, note) {}
 
   // get specific crop notes from crop ID
   async function getSpecificCropNotes(cropID) {

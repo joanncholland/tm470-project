@@ -14,10 +14,12 @@ export default function Task({ task }) {
   const [editingDate, setEditingDate] = useState("");
 
   function handleChange() {
+    // set the completed status in this component's state
     setChecked(!checked);
     setCompleted(id);
   }
 
+  // get the current date, which is used to display 'Today' if the task is due on the current day
   function getTodaysDate() {
     let today = new Date();
 

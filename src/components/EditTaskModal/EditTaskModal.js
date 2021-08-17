@@ -8,7 +8,7 @@ export default function EditTaskModal({ id, title, date, setIsEditing }) {
   const [editingTitle, setEditingTitle] = useState(title);
   const [editingDate, setEditingDate] = useState(reformatDate(date));
 
-  async function handleSubmit(e) {
+  async function handleSubmit() {
     try {
       await editTask(id, editingTitle, editingDate);
     } catch (error) {
@@ -18,8 +18,8 @@ export default function EditTaskModal({ id, title, date, setIsEditing }) {
 
   return (
     <div className="edit-task-modal">
-      <h2>Edit Task</h2>
       <form onSubmit={handleSubmit}>
+        <h2>Edit Task</h2>
         <div className="input-field">
           <label htmlFor="title">Title</label>
           <input

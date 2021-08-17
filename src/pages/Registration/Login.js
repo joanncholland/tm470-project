@@ -17,14 +17,17 @@ export default function Login() {
     e.preventDefault();
 
     try {
+      // if there is no error, set the error to an empty string
       setError("");
+      // set the loading state
       setLoading(true);
+      // log the user in to their account
       await login(emailRef.current.value, passwordRef.current.value);
+      // send the user to their dashboard page
       history.push("/dashboard");
     } catch {
       setError("Failed to sign in.");
     }
-
     setLoading(false);
   }
 

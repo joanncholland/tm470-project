@@ -23,8 +23,11 @@ export default function Registration() {
 
     try {
       setError("");
+      // set loading state
       setLoading(true);
+      // register user's new account
       await register(emailRef.current.value, passwordRef.current.value);
+      // send them to the login page
       history.push("/userdetails");
     } catch {
       setError("Failed to create an account.");

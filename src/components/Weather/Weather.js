@@ -7,6 +7,7 @@ export default function Weather() {
   const { getLocation, weatherData } = useAuth();
   const [error, setError] = useState("");
 
+  // load the user's location and local weather
   async function loadLocation() {
     try {
       await getLocation();
@@ -16,6 +17,7 @@ export default function Weather() {
   }
 
   useEffect(() => {
+    // load the user's location to getch their local weather data
     loadLocation();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
