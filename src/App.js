@@ -17,6 +17,7 @@ import Support from "./pages/Support/Support";
 import Footer from "./components/Footer/Footer";
 import NameLocation from "./pages/Registration/NameLocation";
 import CropInfo from "./pages/CropInfo/CropInfo";
+import Thanks from "./pages/Thanks";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
                     path="/crop-index"
                     component={CropIndex}
                   />
+                  <PrivateRoute path="/thanks" component={Thanks} />
                 </GardenPlannerProvider>
               </Switch>
             </div>
