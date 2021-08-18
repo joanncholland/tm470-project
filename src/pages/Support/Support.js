@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Support.scss";
+
 export default function Support() {
   return (
     <div className="container">

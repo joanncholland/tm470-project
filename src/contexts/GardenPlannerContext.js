@@ -187,6 +187,8 @@ export function GardenPlannerProvider({ children }) {
     deleteCrop,
     getSpecificCropNotes,
     allCropNotes,
+    specificCropNotes,
+    editCropNote,
   };
 
   return (

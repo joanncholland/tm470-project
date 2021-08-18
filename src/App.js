@@ -13,7 +13,7 @@ import Navbar from "./components/Navbar/Navbar";
 import GardenPlanner from "./pages/GardenPlanner/GardenPlanner";
 import TaskList from "./pages/TaskList/TaskList";
 import CropIndex from "./pages//CropIndex/CropIndex";
-import Support from "./pages/Support";
+import Support from "./pages/Support/Support";
 import Footer from "./components/Footer/Footer";
 import NameLocation from "./pages/Registration/NameLocation";
 import CropInfo from "./pages/CropInfo/CropInfo";
