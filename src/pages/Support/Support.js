@@ -6,13 +6,7 @@ export default function Support() {
   return (
     <div className="container">
       <h1>Support</h1>
-      <form
-        name="contact"
-        method="POST"
-        netlify
-        netlify-honeypot="bot-field"
-        hidden
-      >
+      <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
         <p>
           <label>
