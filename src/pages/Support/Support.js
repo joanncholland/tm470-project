@@ -21,7 +21,7 @@ export default function Support() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", name, email, message }),
     })
-      .then(() => alert("Success!"))
+      .then(() => console.log("form sent"))
       .catch((error) => alert(error));
 
     e.preventDefault();
@@ -30,7 +30,7 @@ export default function Support() {
   return (
     <div className="container">
       <h1>Support</h1>
-      <form onSubmit={handleSubmit} action="/thanks">
+      <form onSubmit={handleSubmit} action="/thanks" netlify>
         <p>
           <label>
             Your Name:{" "}
