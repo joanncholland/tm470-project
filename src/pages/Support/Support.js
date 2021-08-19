@@ -1,33 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Support.scss";
 
 export default function Support() {
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [message, setMessage] = useState(null);
+
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
+  const handleSubmit = (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", name, email, message }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+
+    e.preventDefault();
+  };
+
   return (
     <div className="container">
       <h1>Support</h1>
-      <form
-        name="contact"
-        action="/thanks"
-        method="POST"
-        netlify
-        netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="form-name" value="contact" />
+      <form onSubmit={handleSubmit} action="/thanks">
         <p>
           <label>
             Your Name:{" "}
-            <input required autoFocus={true} type="text" name="name" />
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </label>
         </p>
         <p>
           <label>
-            Your Email: <input required type="email" name="email" />
+            Your Email:{" "}
+            <input
+              type="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </label>
         </p>
         <p>
           <label>
-            Message: <textarea required name="message"></textarea>
+            Message:{" "}
+            <textarea
+              name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
           </label>
         </p>
         <p>
