@@ -7,38 +7,36 @@ export default function Support() {
   const [email, setEmail] = useState(null);
   const [message, setMessage] = useState(null);
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
+  //   const encode = (data) => {
+  //     return Object.keys(data)
+  //       .map(
+  //         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+  //       )
+  //       .join("&");
+  //   };
 
-  const handleSubmit = (e) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
-    })
-      .then(() => console.log("form sent"))
-      .catch((error) => alert(error));
+  //   const handleSubmit = (e) => {
+  //     fetch("/", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //       body: encode({ "form-name": "contact", name, email, message }),
+  //     })
+  //       .then(() => console.log("form sent"))
+  //       .catch((error) => alert(error));
 
-    e.preventDefault();
-  };
+  //     e.preventDefault();
+  //   };
 
   return (
     <div className="container">
       <h1>Support</h1>
       <form
-        onSubmit={handleSubmit}
-        action="/thanks"
-        name="contact"
+        onSubmit="submit"
+        name="contact v1"
         data-netlify="true"
-        data-netlify-honeypot="bot-field"
         method="post"
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="contact v1" />
         <p>
           <label>
             Your Name:{" "}
@@ -46,7 +44,7 @@ export default function Support() {
               type="text"
               name="name"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              //   onChange={(e) => setName(e.target.value)}
             />
           </label>
         </p>
@@ -57,7 +55,7 @@ export default function Support() {
               type="email"
               name="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              //   onChange={(e) => setEmail(e.target.value)}
             />
           </label>
         </p>
@@ -67,7 +65,7 @@ export default function Support() {
             <textarea
               name="message"
               value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              //   onChange={(e) => setMessage(e.target.value)}
             />
           </label>
         </p>
