@@ -10,7 +10,7 @@ export default function Support() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    history.pushState("/thanks");
+    history.push("/thanks");
   };
   return (
     <div className="container">
