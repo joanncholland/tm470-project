@@ -40,7 +40,7 @@ function App() {
                 <PrivateRoute path="/dashboard" component={Dashboard} />
                 <PrivateRoute path="/task-list" component={TaskList} />
                 <Route path="/forgot-password" component={ForgotPassword} />
-                <PrivateRoute path="/support" component={Support} />
+                <Route path="/support" component={Support} />
 
                 <GardenPlannerProvider>
                   <PrivateRoute
@@ -58,7 +58,7 @@ function App() {
                     path="/crop-index"
                     component={CropIndex}
                   />
-                  <PrivateRoute path="/thanks" component={Thanks} />
+                  <Route path="/thanks" component={Thanks} />
                 </GardenPlannerProvider>
               </Switch>
             </div>
