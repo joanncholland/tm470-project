@@ -35,7 +35,7 @@ export default function Support() {
         name="contact"
         data-netlify="true"
         method="post"
-        action="/thanks"
+        action="/thanks/"
       >
         <input type="hidden" name="form-name" value="contact" />
         <p>
