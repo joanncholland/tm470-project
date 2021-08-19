@@ -17,7 +17,7 @@ import Support from "./pages/Support/Support";
 import Footer from "./components/Footer/Footer";
 import NameLocation from "./pages/Registration/NameLocation";
 import CropInfo from "./pages/CropInfo/CropInfo";
-import Thanks from "./pages/Thanks";
+import Thanks from "./pages/Thanks/Thanks";
 
 function App() {
   return (
