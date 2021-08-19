@@ -30,7 +30,7 @@ export default function Support() {
   return (
     <div className="container">
       <h1>Support</h1>
-      <form onSubmit={handleSubmit} action="/thanks" netlify>
+      <form onSubmit={handleSubmit} action="/thanks" name="contact" netlify>
         <p>
           <label>
             Your Name:{" "}
