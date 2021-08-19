@@ -31,6 +31,7 @@ export default function Support() {
     <div className="container">
       <h1>Support</h1>
       <form onSubmit={handleSubmit} action="/thanks" name="contact" netlify>
+        <input type="hidden" name="form-name" value="contact" />
         <p>
           <label>
             Your Name:{" "}
