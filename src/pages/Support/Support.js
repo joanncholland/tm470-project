@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./Support.scss";
 
 export default function Support() {
-  const [name, setName] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [message, setMessage] = useState(null);
+  //   const [name, setName] = useState(null);
+  //   const [email, setEmail] = useState(null);
+  //   const [message, setMessage] = useState(null);
 
   //   const encode = (data) => {
   //     return Object.keys(data)
@@ -43,7 +43,7 @@ export default function Support() {
             <input
               type="text"
               name="name"
-              value={name}
+              //   value={name}
               //   onChange={(e) => setName(e.target.value)}
             />
           </label>
@@ -54,7 +54,7 @@ export default function Support() {
             <input
               type="email"
               name="email"
-              value={email}
+              //   value={email}
               //   onChange={(e) => setEmail(e.target.value)}
             />
           </label>
@@ -64,7 +64,7 @@ export default function Support() {
             Message:{" "}
             <textarea
               name="message"
-              value={message}
+              //   value={message}
               //   onChange={(e) => setMessage(e.target.value)}
             />
           </label>
