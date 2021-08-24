@@ -1,3 +1,5 @@
+@import "../../theme";
+
 #notes-modal {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
@@ -12,7 +14,38 @@
 
   #note {
     background-color: white;
-    padding: 20px;
+    border-radius: 4px;
+    padding: 30px;
     width: 50vw;
+
+    h2 {
+      margin: 0;
+    }
+
+    .notes-controls {
+      display: flex;
+      margin-top: 30px;
+
+      p {
+        cursor: pointer;
+        margin-right: 20px;
+        text-decoration: underline;
+      }
+
+      .edit {
+        color: $darkbrown;
+      }
+
+      .close {
+        color: $mutedred;
+      }
+    }
+
+    textarea {
+      font-size: 1em;
+      min-height: 300px;
+      resize: none;
+      width: 45vw;
+    }
   }
 }

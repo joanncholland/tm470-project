@@ -15,20 +15,24 @@ export default function NotesModal({ notes, cropID, setNotesOpen, notesOpen }) {
         {!editing && (
           <>
             <p>{notes && notes}</p>
-            <p
-              onClick={() => {
-                setEditing(!editing);
-              }}
-            >
-              Edit
-            </p>
-            <p
-              onClick={() => {
-                setNotesOpen(!notesOpen);
-              }}
-            >
-              Close
-            </p>
+            <div className="notes-controls">
+              <p
+                className="edit"
+                onClick={() => {
+                  setEditing(!editing);
+                }}
+              >
+                Edit
+              </p>
+              <p
+                className="close"
+                onClick={() => {
+                  setNotesOpen(!notesOpen);
+                }}
+              >
+                Close
+              </p>
+            </div>
           </>
         )}
         {editing && (
@@ -38,27 +42,29 @@ export default function NotesModal({ notes, cropID, setNotesOpen, notesOpen }) {
               defaultValue={notes && notesChanges}
               name="notes"
               id="notes"
-              cols="30"
-              rows="10"
               onChange={(e) => {
                 setNotesChanges(e.target.value);
               }}
             ></textarea>
-            <p
-              onClick={() => {
-                updateCropNotes(cropID, notesChanges);
-                setEditing(!editing);
-              }}
-            >
-              Submit
-            </p>
-            <p
-              onClick={() => {
-                setNotesOpen(!notesOpen);
-              }}
-            >
-              Close
-            </p>
+            <div className="notes-controls">
+              <p
+                className="edit"
+                onClick={() => {
+                  updateCropNotes(cropID, notesChanges);
+                  setEditing(!editing);
+                }}
+              >
+                Submit
+              </p>
+              <p
+                className="close"
+                onClick={() => {
+                  setNotesOpen(!notesOpen);
+                }}
+              >
+                Close
+              </p>
+            </div>
           </>
         )}
       </div>
