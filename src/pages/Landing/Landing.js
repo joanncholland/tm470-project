@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import gardeningIllustration from "../../assets/images/gardeningIllustration.png";
 import tasklist from "../../assets/images/tasklist.png";
@@ -16,7 +17,9 @@ export default function Landing() {
           <p>
             MyGarden is a simple application that helps you plan your garden.
           </p>
-          <button>Register now</button>
+          <Link to="/register">
+            <button>Register now</button>
+          </Link>
         </div>
         <div className="landing-illustration">
           <img src={gardeningIllustration} alt="MyGarden Illustration" />
@@ -56,7 +59,9 @@ export default function Landing() {
       <div className="landing-register">
         <h1>Register your free account today</h1>
         <p>Never feel overwhelmed with gardening again.</p>
-        <button>Register now</button>
+        <Link to="/register">
+          <button>Register now</button>
+        </Link>
       </div>
     </div>
   );
