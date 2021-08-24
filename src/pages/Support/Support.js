@@ -1,6 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
+import instructions from "../Documents/instructions.pdf";
+
 import pdficon from "../../assets/images/pdficon.png";
 
 import "./Support.scss";
@@ -69,7 +71,9 @@ export default function Support() {
           Need a little help getting started? Click on the PDF icon below to
           view the free mini instruction booklet and follow a few simple steps.
         </p>
-        <img src={pdficon} alt="PDF icon" />
+        <a target="_blank" href={instructions} rel="noreferrer">
+          <img src={pdficon} alt="PDF icon" />
+        </a>
       </div>
     </div>
   );
