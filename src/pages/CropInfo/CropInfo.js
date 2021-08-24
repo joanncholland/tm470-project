@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useGardenPlanner } from "../../contexts/GardenPlannerContext";
+import NotesModal from "../../components/NotesModal/NotesModal";
 
 import "./CropInfo.scss";
 
@@ -10,10 +11,11 @@ export default function CropInfo({ match }) {
     setSpecificCropData,
     specificCropData,
     getFullImageURL,
-    getCropNotes,
-    cropNotes,
+    getSpecificCropNotes,
+    selectedCropNote,
   } = useGardenPlanner();
   const [error, setError] = useState("");
+  const [notesOpen, setNotesOpen] = useState(false);
 
   async function getCropData() {
     try {
@@ -27,24 +29,42 @@ export default function CropInfo({ match }) {
   useEffect(() => {
     setSpecificCropData(null);
     getCropData();
-    getCropNotes(currentPlantID);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className="container">
+      {notesOpen && selectedCropNote && (
+        <NotesModal
+          notes={selectedCropNote.notes}
+          cropID={specificCropData.id}
+          setNotesOpen={setNotesOpen}
+          notesOpen={notesOpen}
+        />
+      )}
       {error && <p>{error}</p>}
       {!specificCropData && <p>Loading crop information...</p>}
       {specificCropData && (
         <div className="crop-info">
-          <div className="crop-info-title">
-            <div className="img-container">
-              <img
-                src={getFullImageURL(specificCropData.image_url)}
-                alt={`${specificCropData.name}`}
-              />
+          <div className="crop-header">
+            <div className="crop-info-title">
+              <div className="img-container">
+                <img
+                  src={getFullImageURL(specificCropData.image_url)}
+                  alt={`${specificCropData.name}`}
+                />
+              </div>
+              <h1>{specificCropData.name}</h1>
             </div>
-            <h1>{specificCropData.name}</h1>
+            <button
+              onClick={() => {
+                console.log(specificCropData);
+                getSpecificCropNotes(specificCropData.id);
+                setNotesOpen(!notesOpen);
+              }}
+            >
+              Notes
+            </button>
           </div>
           <h2>Description</h2>
           <p>{specificCropData.description}</p>
@@ -76,10 +96,6 @@ export default function CropInfo({ match }) {
           <p>{specificCropData.harvesting}</p>
           <h2>Storage Use</h2>
           <p>{specificCropData.storage_use}</p>
-          <div>
-            <h2>Your Notes</h2>
-            {cropNotes && <p>{cropNotes}</p>}
-          </div>
         </div>
       )}
     </div>

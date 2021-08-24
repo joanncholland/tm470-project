@@ -16,8 +16,8 @@ export function GardenPlannerProvider({ children }) {
   const [allLocations, setAllLocations] = useState(null);
   const [choosingLocation, setChoosingLocation] = useState(false);
   const [selectedCrop, setSelectedCrop] = useState(null);
+  const [selectedCropNote, setSelectedCropNote] = useState(null);
   const [allCropNotes, setAllCropNotes] = useState([]);
-  const [specificCropNotes, setSpecificCropNotes] = useState("");
   const { currentUser } = useAuth();
 
   // get API endpoint for all crops
@@ -72,25 +72,6 @@ export function GardenPlannerProvider({ children }) {
       });
   }
 
-  // edit notes for crop
-  async function editCropNote(cropID, note) {
-    await database
-      .ref(`users/${currentUser.uid}/cropNotes/${cropID}`)
-      .set({ notes: `${note}` });
-  }
-
-  // get specific crop notes from crop ID
-  async function getSpecificCropNotes(cropID) {
-    await database
-      .ref(`users/${currentUser.uid}/cropNotes/${cropID}`)
-      .on("value", (snapshot) => {
-        if (snapshot) {
-          console.log(snapshot.val());
-          snapshot.val() && setSpecificCropNotes(snapshot.val().notes);
-        }
-      });
-  }
-
   // add new garden location
   async function addLocation(location) {
     await database.ref(`users/${currentUser.uid}/locations`).push({
@@ -128,10 +109,7 @@ export function GardenPlannerProvider({ children }) {
       .ref(`users/${currentUser.uid}/locations/${locationID}/crops`)
       .push({ cropID, name: cropName, imageURL: cropImageURL });
 
-    await database
-      .ref(`users/${currentUser.uid}/cropNotes`)
-      .child(cropID)
-      .setValue("");
+    await database.ref(`users/${currentUser.uid}/cropNotes/${cropID}`).set("");
   }
 
   async function deleteLocation(locationID) {
@@ -155,6 +133,22 @@ export function GardenPlannerProvider({ children }) {
       })
       .catch(function (error) {
         console.log(error);
+      });
+  }
+
+  async function updateCropNotes(cropID, notes) {
+    await database
+      .ref(`users/${currentUser.uid}/cropNotes/${cropID}`)
+      .set({ notes: `${notes}` });
+  }
+
+  async function getSpecificCropNotes(cropID) {
+    await database
+      .ref(`users/${currentUser.uid}/cropNotes/${cropID}`)
+      .on("value", (snapshot) => {
+        setSelectedCropNote(snapshot.val());
+        // console.log(cropID);
+        // console.log(snapshot.val());
       });
   }
 
@@ -187,8 +181,8 @@ export function GardenPlannerProvider({ children }) {
     deleteCrop,
     getSpecificCropNotes,
     allCropNotes,
-    specificCropNotes,
-    editCropNote,
+    selectedCropNote,
+    updateCropNotes,
   };
 
   return (

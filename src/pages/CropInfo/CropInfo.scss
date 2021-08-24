@@ -4,6 +4,12 @@
   max-width: 800px;
   width: 100%;
 
+  .crop-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .crop-info-title {
     align-items: center;
     display: flex;
